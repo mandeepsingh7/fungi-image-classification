@@ -21,25 +21,26 @@ with \
 Sequential (\
   (0): Dropout(p=0.3, inplace=True)\
   (1): Linear(in_features=1280, out_features=512, bias=True)\
-  (2): Linear(in_features=512, out_features=64, bias=True)\
-  (3): Linear(in_features=64, out_features=5, bias=True)\
+  (2): Linear(in_features=512, out_features=512, bias=True)\
+  (3): Linear(in_features=512, out_features=5, bias=True)\
 )
 - We freeze all other weights except the ones corresponding to these last 3 layers.
-- Trainable params: 689,029
-- With efficientnet_v2_m, we get an accuracy of 67.03 %.
+- Trainable params: 921,093
+- With efficientnet_v2_m, we get an accuracy of 65.64 %.
 - We specified number of epochs = 50 and patience = 10.
-- But we observed early stop at Epoch Number 20
+- But we observed early stop at Epoch Number 29
 - -----------------
 - In resnet152, we replace fc layer\
   Linear(in_features=2048, out_features=1000, bias=True)\
   with\
   Sequential (\
   (0): Linear(in_features=2048, out_features=512, bias=True)\
-  (1): Linear(in_features=512, out_features=64, bias=True)\
-  (2): Linear(in_features=64, out_features=5, bias=True)\
+  (1): Linear(in_features=512, out_features=512, bias=True)\
+  (2): Linear(in_features=512, out_features=64, bias=True)\
+  (3): Linear(in_features=64, out_features=4, bias=True)\
 )
 - We freeze all other weights except the ones corresponding to these last 3 layers.
-- Trainable params: 1,082,245
-- With resnet152, we get an accuracy of 70.54 %.
+- Trainable params: 1,344,901
+- With resnet152, we get an accuracy of 70.76 %.
 - We specified number of epochs = 50 and patience = 10.
-- But we observed early stop at Epoch Number 23
+- But we observed early stop at Epoch Number 44
