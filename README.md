@@ -69,7 +69,7 @@ The model was evaluated on a held out test set.
 Model converges smoothly with slight overfitting.
 
 ### Confusion Matrix 
-<img src="assets/confusion_matrix.png" width="400"/>
+<img src="assets/confusion_matrix.png" width="800"/>
 
 Most misclassifications occur between H1, H2, H3. H5 and H6 show strong separation.
 
